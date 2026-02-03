@@ -20,7 +20,7 @@ function Footer() {
 			<p>
 				A portfolio designed & built by{" "}
 				<a
-					href="https://github.com/yujisatojr/react-portfolio-template"
+					href="https://bedoo7.github.io/abdelrahman-hassan-portfolio/"
 					target="_blank"
 					rel="noreferrer"
 				>
