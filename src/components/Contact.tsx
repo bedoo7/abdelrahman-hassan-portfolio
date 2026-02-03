@@ -1,116 +1,107 @@
-import React, { useRef, useState } from 'react';
-import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
-import TextField from '@mui/material/TextField';
+import React, { useMemo } from "react";
+import "../assets/styles/Contact.scss";
+
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
 
 function Contact() {
+	const YOUR_EMAIL = "abdelrahmanhassan3190@gmail.com";
+	const YOUR_PHONE = "(+20)1205992601";
+	const YOUR_LOCATION = "Alexandria, Egypt";
 
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+	const LINKEDIN_URL = "https://www.linkedin.com/in/abdelrahman7assan/";
+	const GITHUB_URL = "https://github.com/bedoo7";
+	const WHATSAPP_NUMBER = "201205992601";
 
-  const [nameError, setNameError] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<boolean>(false);
-  const [messageError, setMessageError] = useState<boolean>(false);
+	const mailtoHref = useMemo(() => {
+		const subject = "Portfolio Inquiry";
+		const body = [
+			"Hi Abdelrahman,",
+			"",
+			"I’m reaching out regarding your portfolio.",
+			"",
+			"Thanks!",
+		].join("\n");
 
-  const form = useRef();
+		return `mailto:${YOUR_EMAIL}?subject=${encodeURIComponent(
+			subject,
+		)}&body=${encodeURIComponent(body)}`;
+	}, [YOUR_EMAIL]);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
+	return (
+		<section id="contact" className="contact-section">
+			<div className="items-container">
+				<div className="contact-header">
+					<h1>Contact</h1>
+				</div>
 
-    setNameError(name === '');
-    setEmailError(email === '');
-    setMessageError(message === '');
+				<div className="contact-card">
+					<div className="contact-card-top">
+						<div>
+							<h2>Let’s connect</h2>
+							<p className="muted">
+								Fastest way to reach me: Email or LinkedIn.
+							</p>
+						</div>
+					</div>
 
-    /* Uncomment below if you want to enable the emailJS */
+					<div className="info-grid">
+						<div className="info-row">
+							<EmailOutlinedIcon fontSize="small" />
+							<span>{YOUR_EMAIL}</span>
+						</div>
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+						<div className="info-row">
+							<PhoneIphoneOutlinedIcon fontSize="small" />
+							<span>{YOUR_PHONE}</span>
+						</div>
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
-  };
+						<div className="info-row">
+							<LocationOnOutlinedIcon fontSize="small" />
+							<span>{YOUR_LOCATION}</span>
+						</div>
+					</div>
 
-  return (
-    <div id="contact">
-      <div className="items-container">
-        <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className='contact-form'
-          >
-            <div className='form-flex'>
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-              />
-            </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-            />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
-            </Button>
-          </Box>
-        </div>
-      </div>
-    </div>
-  );
+					<div className="quick-links">
+						<a className="pill" href={mailtoHref}>
+							<EmailOutlinedIcon fontSize="small" /> Email
+						</a>
+
+						<a
+							className="pill"
+							href={LINKEDIN_URL}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<LinkedInIcon fontSize="small" /> LinkedIn
+						</a>
+
+						<a
+							className="pill"
+							href={GITHUB_URL}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<GitHubIcon fontSize="small" /> GitHub
+						</a>
+
+						<a
+							className="pill"
+							href={`https://wa.me/${WHATSAPP_NUMBER}`}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<WhatsAppIcon fontSize="small" /> WhatsApp
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }
 
 export default Contact;

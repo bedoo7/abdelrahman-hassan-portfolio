@@ -1,48 +1,152 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+/* ===== Theme variables (default: LIGHT) ===== */
+.contact-section {
+	--c-text: rgba(0, 0, 0, 0.92);
+	--c-muted: rgba(0, 0, 0, 0.65);
+	--c-surface: rgba(0, 0, 0, 0.03);
+	--c-surface-2: rgba(0, 0, 0, 0.04);
+	--c-border: rgba(0, 0, 0, 0.1);
+	--c-accent: #5000ca;
+
+	adding: 80x 0 70px;
+	color: var(--c-text);
 }
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
+/* ===== DARK overrides (suort common toggles) ===== */
+@media (prefers-color-scheme: dark) {
+	.contact-section {
+		--c-text: rgba(255, 255, 255, 0.92);
+		--c-muted: rgba(255, 255, 255, 0.7);
+		--c-surface: rgba(255, 255, 255, 0.05);
+		--c-surface-2: rgba(0, 0, 0, 0.2);
+		--c-border: rgba(255, 255, 255, 0.12);
+	}
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+/* fallback لو مفيش toggle classes */
+@media (prefers-color-scheme: dark) {
+	.contact-section {
+		--c-text: rgba(255, 255, 255, 0.92);
+		--c-muted: rgba(255, 255, 255, 0.7);
+		--c-surface: rgba(255, 255, 255, 0.05);
+		--c-surface-2: rgba(0, 0, 0, 0.2);
+		--c-border: rgba(255, 255, 255, 0.12);
+	}
 }
 
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+/* ===== Header ===== */
+.contact-header {
+	margin-bottom: 18px;
+
+	h1 {
+		margin: 0 0 8px;
+		font-size: 42px;
+		letter-spacing: 0.3px;
+	}
+
+	p {
+		margin: 0;
+		max-width: 70ch;
+		color: var(--c-muted);
+		line-height: 1.7;
+	}
 }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
+.muted {
+	color: var(--c-muted);
 }
 
-form {
-  width: 100% !important;
+/* ===== Full-width card ===== */
+.contact-card {
+	width: 100%;
+	border-radius: 18px;
+	padding: 18px;
+	border: 1px solid var(--c-border);
+	background: var(--c-surface);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+
+	h2 {
+		margin: 0 0 6px;
+		font-size: 20px;
+		letter-spacing: 0.2px;
+	}
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+.contact-card-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 14px;
+	margin-bottom: 14px;
+}
+
+/* ===== Info grid ===== */
+.info-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 10px;
+	margin: 10px 0 14px;
+}
+
+/* ✅ IMPORTANT: make Phone/Location same as Email in light/dark */
+.info-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 12px;
+	border-radius: 14px;
+	border: 1px solid var(--c-border);
+	background: var(--c-surface-2);
+	color: var(--c-text); /* <-- fixed */
+	text-decoration: none;
+
+	svg {
+		opacity: 0.9;
+	}
+
+	span {
+		color: var(--c-text);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+/* ===== Pills ===== */
+.quick-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 12px;
+	border-radius: 999px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 13px;
+	color: var(--c-text);
+
+	border: 1px solid color-mix(in srgb, var(--c-accent) 45%, transparent);
+	background: color-mix(in srgb, var(--c-accent) 10%, transparent);
+	transition: 0.18s ease;
+
+	&:hover {
+		transform: translateY(-1px);
+		border-color: color-mix(in srgb, var(--c-accent) 75%, transparent);
+		background: color-mix(in srgb, var(--c-accent) 16%, transparent);
+	}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 950px) {
+	.contact-header h1 {
+		font-size: 34px;
+	}
+
+	.info-grid {
+		grid-template-columns: 1fr;
+	}
 }
