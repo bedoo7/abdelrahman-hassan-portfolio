@@ -20,7 +20,11 @@ function Footer() {
 			<p>
 				A portfolio designed & built by{" "}
 				<a
+<<<<<<< HEAD
 					href="https://bedoo7.github.io/abdelrahman-hassan-portfolio/"
+=======
+					href="https://github.com/bedoo7/abdelrahman-hassan-portfolio"
+>>>>>>> 5fb7412f34e8b623d081b78f822e36a694a9616e
 					target="_blank"
 					rel="noreferrer"
 				>
