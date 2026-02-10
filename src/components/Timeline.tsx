@@ -15,7 +15,7 @@ import "../assets/styles/Timeline.scss";
 const timelineItems = [
 	{
 		type: "work",
-		date: "Nov 2025 – Present", // لو هتخليها Jan 2025 – Present عدّل هنا
+		date: "Nov 2025 – Present",
 		title: "Freelance Front-End Developer",
 		subtitle: "Remote · Egypt",
 		points: [
@@ -71,7 +71,7 @@ const timelineItems = [
 const iconBg = (type: string) => {
 	if (type === "education") return "#0f766e";
 	if (type === "project") return "#1d4ed8";
-	return "#5000ca"; // work
+	return "#5000ca";
 };
 
 function Timeline() {

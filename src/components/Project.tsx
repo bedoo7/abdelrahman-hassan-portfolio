@@ -9,7 +9,6 @@ function Project() {
 			<h1>Projects</h1>
 
 			<div className="projects-grid">
-				{/* Majales */}
 				<div className="project">
 					<a href="https://saudibods.com/" target="_blank" rel="noreferrer">
 						<img
@@ -31,7 +30,6 @@ function Project() {
 					</p>
 				</div>
 
-				{/* Docs Retrieved */}
 				<div className="project">
 					<a
 						href="https://dev.docsretrieved.ca/"
