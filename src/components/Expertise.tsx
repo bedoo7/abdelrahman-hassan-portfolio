@@ -7,33 +7,25 @@ import "../assets/styles/Expertise.scss";
 const experiences = [
 	{
 		icon: faLaptopCode,
-		title: "Freelance Front-End Developer",
-		company: "Freelance",
-		period: "Nov 2025 – Present",
+		title: "Software Developer",
+		company: "DocsRetrieved · Full-time",
+		period: "Feb 2026 – Present",
 		location: "Remote",
 		description:
-			"Building modern, responsive user interfaces and reusable components for web apps, focusing on clean UI, performance, and maintainable code.",
+			"Lead the end-to-end design, architecture, and development of modern full-stack web applications using industry-standard technologies. Engineer scalable back-end services, secure authentication systems, and high-performance RESTful APIs capable of supporting production workloads. Build intuitive, responsive user experiences while maintaining clean architecture, reusable codebases, and long-term maintainability. Drive technical decisions, optimize application performance, troubleshoot complex issues, and deliver reliable software solutions aligned with business goals.",
 
-		tech: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "MUI", "Git"],
+		tech: ["React", "Node.js", "Express.js", "TypeScript", "MongoDB", "JWT Authentication", "REST APIs", "Git"],
 	},
 	{
 		icon: faBriefcase,
-		title: "Frontend Developer",
+		title: "Software Engineer",
 		company: "Kay Technology · Full-time",
-		period: "Jan 2025 – Nov 2025 (11 mos)",
+		period: "Jan 2025 – Feb 2026 (1 yr)",
 		location: "Saudi Arabia · Remote",
 		description:
-			"Worked on production front-end features, collaborating with the team to deliver stable releases and enhance user experience.",
+			"Contributed to the engineering of enterprise-grade web applications, delivering production-ready features in a fast-paced Agile environment. Designed scalable application modules, integrated backend services, and improved maintainability through clean software engineering practices. Collaborated closely with product managers, designers, and engineers to transform business requirements into reliable software solutions. Participated throughout the software development lifecycle, including architecture discussions, implementation, optimization, debugging, testing, and release delivery.",
 
-		tech: [
-			"React",
-			"TypeScript",
-			"JavaScript",
-			"REST APIs",
-			"Git",
-			"GitHub",
-			"CI/CD",
-		],
+		tech: ["React", "TypeScript", "JavaScript", "REST APIs", "Git", "GitHub", "CI/CD"],
 	},
 ];
 

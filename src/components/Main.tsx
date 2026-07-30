@@ -27,8 +27,11 @@ function Main() {
 							<LinkedInIcon />
 						</a>
 					</div>
-					<h1>Abdelrahman Hassan</h1>
-					<p>Frontend Developer</p>
+				<h1>Abdelrahman Hassan</h1>
+				<p>Full-Stack Software Engineer</p>
+				<p className="about-text">
+					Full-Stack Software Engineer specializing in designing and delivering modern, scalable web applications across the entire development lifecycle. Experienced in architecting responsive user interfaces, developing secure back-end services, designing RESTful APIs, implementing authentication and authorization, and building maintainable, production-ready software with a strong focus on performance, scalability, and code quality.
+				</p>
 
 					<div className="mobile_social_icons">
 						<a
