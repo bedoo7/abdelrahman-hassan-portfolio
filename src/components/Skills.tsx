@@ -27,11 +27,11 @@ function Skills() {
 				<p className="skills-subtitle">
 					Technologies and tools I work with to build modern, scalable applications.
 				</p>
-				<div className="skills-grid">
-					{skills.map((skill, index) => (
-						<Chip key={index} className="skill-chip" label={skill} />
-					))}
-				</div>
+			<div className="flex-chips" style={{ marginTop: 12 }}>
+				{skills.map((skill, index) => (
+					<Chip key={index} className="chip" label={skill} />
+				))}
+			</div>
 			</div>
 		</div>
 	);

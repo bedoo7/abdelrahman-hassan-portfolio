@@ -7,7 +7,7 @@ import "../assets/styles/Expertise.scss";
 const experiences = [
 	{
 		icon: faLaptopCode,
-		title: "Software Developer",
+		title: "Software Engineer",
 		company: "DocsRetrieved · Full-time",
 		period: "Feb 2026 – Present",
 		location: "Remote",
