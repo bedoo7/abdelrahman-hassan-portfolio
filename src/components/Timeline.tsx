@@ -19,10 +19,7 @@ const timelineItems = [
 		title: "Software Developer",
 		subtitle: "DocsRetrieved · Full-time · Remote",
 		points: [
-			"Lead the end-to-end design, architecture, and development of modern full-stack web applications using industry-standard technologies",
-			"Engineer scalable back-end services, secure authentication systems, and high-performance RESTful APIs capable of supporting production workloads",
-			"Build intuitive, responsive user experiences while maintaining clean architecture, reusable codebases, and long-term maintainability",
-			"Drive technical decisions, optimize application performance, troubleshoot complex issues, and deliver reliable software solutions aligned with business goals",
+			"Leading full-stack development of production web applications, from architecture and backend services to responsive UI, with a focus on performance and long-term maintainability.",
 		],
 		icon: faBriefcase,
 	},
@@ -32,10 +29,7 @@ const timelineItems = [
 		title: "Software Engineer",
 		subtitle: "Kay Technology · Full-time · Saudi Arabia (Remote)",
 		points: [
-			"Contributed to the engineering of enterprise-grade web applications, delivering production-ready features in a fast-paced Agile environment",
-			"Designed scalable application modules, integrated backend services, and improved maintainability through clean software engineering practices",
-			"Collaborated closely with product managers, designers, and engineers to transform business requirements into reliable software solutions",
-			"Participated throughout the software development lifecycle, including architecture discussions, implementation, optimization, debugging, testing, and release delivery",
+			"Delivered production-ready features for enterprise web applications in an Agile environment, collaborating cross-functionally across the full software development lifecycle.",
 		],
 		icon: faBriefcase,
 	},
